@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "demo-hook"
+version = "1.0"
+description = 'demoing an issue with hatch hooks'
+readme = "README.md"
+license = "MIT"
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hookdemo.py"
